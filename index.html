@@ -10,27 +10,45 @@
       href="assets/img/logo nintendo.png"
       type="image/x-icon"
     />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300&family=Quattrocento+Sans:ital,wght@1,700&family=Raleway:wght@600&family=Roboto+Flex:opsz@8..144&display=swap"
+      rel="stylesheet"
+    />
     <title>nintendo</title>
   </head>
   <body>
     <div class="container-box">
       <header class="headers">
-        <div class="header">
-          <select name="select">
-            <option value="Precio">Precio</option>
-            <option value="Mayor a Menor Valor" selected>
-              Mayor a Menor Valor
-            </option>
-            <option value="Menor a Mayor Valor">Menor a Mayor Valor</option>
-          </select>
+        <div class="logo">
+          <a href="index.html">
+            <img
+              src="assets/img/logo nintendo.png"
+              alt="palabra nintendo con letras rojas"
+            />
+          </a>
+        </div>
+        <div class="navbar">
+          <h1>Venta de juegos de nintendo</h1>
+          <h2>ordenar por:</h2>
+          <div class="order-select">
+            <select name="select">
+              <option value="Precio">Precio</option>
+              <option value="Mayor a Menor Valor" selected>
+                Mayor a Menor Valor
+              </option>
+              <option value="Menor a Mayor Valor">De A</option>
+            </select>
+          </div>
         </div>
       </header>
       <aside class="aside">
         <h2>Nintendo Ventas</h2>
-        <h3>Inicio</h3>
-        <h3>Catálogo</h3>
-        <h3>Ofertas</h3>
-        <h3>Contacto</h3>
+        <button>Inicio</button>
+        <button>Catálogo</button>
+        <button>Ofertas</button>
+        <button>Contacto</button>
       </aside>
       <section class="products"></section>
       <footer class="footer"></footer>
