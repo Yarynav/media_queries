@@ -4,6 +4,10 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,400,0,0"
+    />
     <link rel="stylesheet" href="assets/style/style.css" />
     <link
       rel="shortcut icon"
@@ -21,37 +25,169 @@
   <body>
     <div class="container-box">
       <header class="headers">
-        <div class="logo">
-          <a href="index.html">
-            <img
-              src="assets/img/logo nintendo.png"
-              alt="palabra nintendo con letras rojas"
-            />
-          </a>
+        <div class="navigation-bar">
+          <div class="logo">
+            <a href="index.html">
+              <img
+                src="assets/img/logo nintendo.png"
+                alt="palabra nintendo con letras rojas"
+              />
+            </a>
+          </div>
+          <button
+            class="navigation-bar-button"
+            id="menu-button"
+            onclick="openMenu()"
+          >
+            <span class="material-symbols-outlined icons-menu"> menu </span>
+          </button>
         </div>
         <div class="navbar">
           <h1>Venta de juegos de nintendo</h1>
+
           <h2>ordenar por:</h2>
           <div class="order-select">
-            <select name="select">
+            <select name="select" id="barra-select">
               <option value="Precio">Precio</option>
-              <option value="Mayor a Menor Valor" selected>
-                Mayor a Menor Valor
+              <option value="Destacados" selected>Destacados</option>
+              <option value="Precio de Mayor a Menor" selected>
+                Precio de Mayor a Menor
               </option>
-              <option value="Menor a Mayor Valor">De A</option>
+              <option value="Precio de Menor a Mayor">
+                Precio de Menor a Mayor
+              </option>
             </select>
           </div>
         </div>
       </header>
       <aside class="aside">
-        <h2>Nintendo Ventas</h2>
-        <button>Inicio</button>
-        <button>Catálogo</button>
-        <button>Ofertas</button>
-        <button>Contacto</button>
+        <div class="menu-options" id="menu-options">
+          <h2>Nintendo Ventas</h2>
+          <button onclick="selectMenu()">Inicio</button>
+          <button onclick="selectMenu()">Catálogo</button>
+          <button onclick="selectMenu()">Ofertas</button>
+          <button onclick="selectMenu()">Contacto</button>
+        </div>
       </aside>
-      <section class="products"></section>
-      <footer class="footer"></footer>
+      <section class="products">
+        <div class="product">
+          <h3>GameBoy Color</h3>
+          <figure>
+            <img
+              src="assets/img/game boy color.jpg"
+              alt="consola de nintendo de mano color verde con botones negros"
+            />
+          </figure>
+          <button class="ripple">Ver más</button>
+        </div>
+        <div class="product">
+          <h3>GameBoy Advance</h3>
+          <figure>
+            <img
+              src="assets/img/gameboy advance.jpg"
+              alt="consola nintendo tipo clamshell color azul platinado"
+            />
+          </figure>
+          <button class="ripple">Ver más</button>
+        </div>
+        <div class="product">
+          <h3>GameBoy</h3>
+          <figure>
+            <img
+              src="assets/img/gameboy.jpg"
+              alt="consola nintendo portatil color azul con botones gris "
+            />
+          </figure>
+          <button class="ripple">Ver más</button>
+        </div>
+        <div class="product">
+          <h3>Gamecube</h3>
+          <figure>
+            <img
+              src="assets/img/Gamecube-console.jpg"
+              alt="consola de nintendo con control remoto tipo cubo color negro "
+            />
+          </figure>
+          <button class="ripple">Ver más</button>
+        </div>
+        <div class="product">
+          <h3>Nintendo 64</h3>
+          <figure>
+            <img
+              src="assets/img/Nintendo 64.jpg"
+              alt="consola gris oscura de nintendo con control remoto color gris para  "
+            />
+          </figure>
+          <button class="ripple">Ver más</button>
+        </div>
+        <div class="product">
+          <h3>Nintendo Switch</h3>
+          <figure>
+            <img
+              src="assets/img/nintendo switvh.avif"
+              alt="consola de nintendo protatil y para televisor con controles removibles"
+            />
+          </figure>
+          <button class="ripple">Ver más</button>
+        </div>
+        <div class="product">
+          <h3>Super Nintendo</h3>
+          <figure>
+            <img
+              src="assets/img/super nintendo.jpg"
+              alt="consola de nintendo modelo con forma de caja con controles gris y botones azules"
+            />
+          </figure>
+          <button class="ripple">Ver más</button>
+        </div>
+        <div class="product">
+          <h3>Nintendo Wii U</h3>
+          <figure>
+            <img
+              src="assets/img/wii u.jpg"
+              alt="consola de nintendo cuadrado color negra control con pantalla inalambrico rectangular  "
+            />
+          </figure>
+          <button class="ripple">Ver más</button>
+        </div>
+        <div class="product">
+          <h3>Nintendo Wii</h3>
+          <figure>
+            <img
+              src="assets/img/wii.jpg"
+              alt="consola de nintendo alta con control rectangular inalambrico color blanca"
+            />
+          </figure>
+          <button class="ripple">Ver más</button>
+        </div>
+      </section>
+      <div class="page-navigator">
+        <nav aria-label="Page navigation example">
+          <ul class="pagination">
+            <li class="page-item">
+              <a class="page-link text-danger" href="#" aria-label="Previous">
+                <span aria-hidden="true">&laquo;</span>
+              </a>
+            </li>
+            <li class="page-item">
+              <a class="page-link text-danger" href="#">1</a>
+            </li>
+            <li class="page-item">
+              <a class="page-link text-danger" href="#">2</a>
+            </li>
+            <li class="page-item">
+              <a class="page-link text-danger" href="#">3</a>
+            </li>
+            <li class="page-item text-danger">
+              <a class="page-link text-danger" href="#" aria-label="Next">
+                <span aria-hidden="true">&raquo;</span>
+              </a>
+            </li>
+          </ul>
+        </nav>
+      </div>
+      <footer class="footer"><b>Fono Ventas : 2 242 131 46</b></footer>
     </div>
+    <script src="assets/js/main.js"></script>
   </body>
 </html>
